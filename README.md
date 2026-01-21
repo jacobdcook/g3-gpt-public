@@ -1,7 +1,7 @@
 <!-- Markdown Cheatsheet:
 https://www.markdownguide.org/cheat-sheet/ -->
 
-![Logo](/readme-img/G3_4-crop.png)
+![Logo](https://raw.githubusercontent.com/jacobdcook/g3-gpt-public/main/readme-img/G3_4-crop.png)
 
 ## Synopsis
 
@@ -32,28 +32,28 @@ We used Lunacy to create a mockup of our product to present to our client
 
 <!-- TODO -->
 
-![Login](/readme-img/mock-chat.png)
+![Login](https://raw.githubusercontent.com/jacobdcook/g3-gpt-public/main/readme-img/mock-chat.png)
 
 ### Design
 
-![Workflow Diagram](/readme-img/project-workflow-diagram.jpg)
+![Workflow Diagram](https://raw.githubusercontent.com/jacobdcook/g3-gpt-public/main/readme-img/project-workflow-diagram.jpg)
 
 ### Implementation
 
 Login Page
 - Description: A clean and secure login interface integrated with Microsoft Azure Authentication.
 - Purpose: Ensures secure access for authenticated users.
-<img src="/readme-img/login.png" width="1241" alt="Login Page Screenshot">
+<img width="1241" alt="Screenshot 2024-12-01 at 8 02 47 PM" src="https://raw.githubusercontent.com/jacobdcook/g3-gpt-public/main/readme-img/login.png">
 
 Chat Interface
 - Description: The AI-powered chat interface enables users to query and retrieve document-related information in real time.
 - Purpose: Acts as the primary interaction point for document retrieval.
-<img src="/readme-img/architecture-diagram.png" width="1292" alt="Chat Interface Architecture Diagram">
+<img width="1292" alt="Screenshot 2024-12-01 at 8 04 52 PM" src="https://raw.githubusercontent.com/jacobdcook/g3-gpt-public/main/readme-img/architecture-diagram.png">
 
 Document Management Interface
 - Description: Enables managers to upload, manage, and organize documents for retrieval.
 - Purpose: Simplifies document maintenance while ensuring security.
-<img src="/readme-img/MyDocumentspage.png" width="1292">
+<img src="https://raw.githubusercontent.com/jacobdcook/g3-gpt-public/main/readme-img/MyDocumentspage.png" width="1292">
 
 
 ### Team Members (Contributors)
