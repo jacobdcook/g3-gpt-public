@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+/*sets background color, font-family, font color*/
+body {
+  background: rgba(50, 50, 50, 1);
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.App {
+  /*sets height, background color for app*/
+  min-height: 100vh;
+  display: flex;
+  background-color: rgba(50, 50, 50, 1);
+  color: white;
+  position: absoluate;
+  top:0;bottom:0;right:0;left:0;
+}
+
+.sideBar {
+  /*sets flex of left sideBar*/
+  width: 300px;
+  padding: 10px;
+  border-right: 1px solid rgb(100, 100, 100);
+  background-color: #252525;
+}
+/*creats attributes for the main left side of app*/
+.main {
+  flex: 9;
+}
+/*adds padding to whole upperSide, border, and height between upperSide and lowerSide buttons*/
+.upperSide {
+  padding: 2.5rem;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  height: 70%;
+}
+/*aligns margin of G3-GPT logo*/
+.upperSideTop {
+  display:flex;
+  align-items: center;
+  margin-bottom: 2.5 rem;
+
+}
+/*sets attributes of the add New Chat button*/
+.addBtn{
+  height: 2rem;
+  padding-right: 0.5rem;
+}
+/*sets attributes of New Chat button*/
+.midBtn {
+  background: #4e4d4d;
+  border: none;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  width: 22rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem auto;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+/*sets attributes for Recents, MyDocuments, and User Management buttons*/
+.generalBtn{
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: rgba(222,222,222,1);
+  padding: 1.5rem;
+  width: 22rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(50,50,50,1);
+}
+/*sets image that is pulled from assests for Recents, MyDocuments, User Management buttons*/
+.generalBtn>img{
+  margin-right: 1rem;
+  object-fit: cover;
+  height: 2rem;
+}
+/*sets padding lowerSide: Home and Questions? buttons*/
+.lowerSide{
+  padding: 2rem;
+}
+/*sets attributes for lowerSide buttons: Home and Questions?*/
+.listItems{
+  background:  #252525;
+  color: rgba(222,222,222,1);
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 1.5rem;
+  width: 22rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: transparent;
+}
+/*sets image that is pulled from assests for Home and Questions buttons*/
+.listItems>img{
+  margin-right: 1rem;
+  height: 2rem;
+}
+/*sets the placemnet of logo*/
+.logo {
+  margin-right: 1rem; 
+}
+/*increases the font-size of G3-GPT logo of upperRightTop*/
+.brand {
+  font-size: 2rem; 
+}
+/*creates padding for user icon, text-reply box, and chatInput box*/
+.main{
+  min-height: calc(100vh - 15rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem 10rem;
+}
+/*makes chats inputs scrollable*/
+.chats{
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 70rem;
+  height: calc(100vh -17rem);
+}
+/*grabs each chat and gives them margin, padding, etc attributes*/
+.chat{
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+
+}
+/*creates image placement attributes for chatBox*/
+.chatImg{
+  object-fit: cover;
+  width: 3.5rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+}
+/*creats color and size attributes for chatBot response*/
+.bot{
+  background: rgba(222,222,222,1);
+  color: #252525;
+  width: fit-content;
+  border-radius: 0.5rem;
+}
+/*creates color and size attributes for user input*/
+.user{
+  background: #252525;
+  width: fit-content;
+  border-radius: 0.5rem;
+}
+/*creates spacing fpr chatInput box*/
+.chatFooter{
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+/*creates color,size attributes for input chatInput box button*/
+.chatInput{
+  padding: 0.5rem;
+  background: rgb(220,220,220);
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 65rem;
+}
+/*changes color of text and adds padding to chatInput box*/
+.chatInput>input{
+  width: calc(100% - 3rem);
+  outline: none;
+  padding: 1.25rem;
+  color: white;
+}
+/*creates transparency in chatInput box button*/
+.chatInput>input, .upload{
+  background: transparent;
+  border: none;
+}
+/*adds bottom text of chatInput box*/
+.chatFooter>p{
+  margin: 2rem 0;
+}
+
+

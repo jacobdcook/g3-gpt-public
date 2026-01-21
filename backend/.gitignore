@@ -1,0 +1,4 @@
+# Ignore environment files
+.env
+uploads
+Chat-Logs/*.txt
