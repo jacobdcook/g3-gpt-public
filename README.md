@@ -43,12 +43,12 @@ We used Lunacy to create a mockup of our product to present to our client
 Login Page
 - Description: A clean and secure login interface integrated with Microsoft Azure Authentication.
 - Purpose: Ensures secure access for authenticated users.
-<img width="1241" alt="Screenshot 2024-12-01 at 8 02 47 PM" src="https://github.com/user-attachments/assets/a02c1df9-1fe3-42b2-a249-7742c32f2b17">
+<img width="1241" alt="Screenshot 2024-12-01 at 8 02 47 PM" src="/readme-img/login.png">
 
 Chat Interface
 - Description: The AI-powered chat interface enables users to query and retrieve document-related information in real time.
 - Purpose: Acts as the primary interaction point for document retrieval.
-<img width="1292" alt="Screenshot 2024-12-01 at 8 04 52 PM" src="https://github.com/user-attachments/assets/b4e829a9-15bc-4617-b2b4-a3b45eb5554c">
+<img width="1292" alt="Screenshot 2024-12-01 at 8 04 52 PM" src="/readme-img/architecture-diagram.png">
 
 Document Management Interface
 - Description: Enables managers to upload, manage, and organize documents for retrieval.
