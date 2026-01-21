@@ -43,12 +43,12 @@ We used Lunacy to create a mockup of our product to present to our client
 Login Page
 - Description: A clean and secure login interface integrated with Microsoft Azure Authentication.
 - Purpose: Ensures secure access for authenticated users.
-<img width="1241" alt="Screenshot 2024-12-01 at 8 02 47 PM" src="/readme-img/login.png">
+<img src="/readme-img/login.png" width="1241" alt="Login Page Screenshot">
 
 Chat Interface
 - Description: The AI-powered chat interface enables users to query and retrieve document-related information in real time.
 - Purpose: Acts as the primary interaction point for document retrieval.
-<img width="1292" alt="Screenshot 2024-12-01 at 8 04 52 PM" src="/readme-img/architecture-diagram.png">
+<img src="/readme-img/architecture-diagram.png" width="1292" alt="Chat Interface Architecture Diagram">
 
 Document Management Interface
 - Description: Enables managers to upload, manage, and organize documents for retrieval.
@@ -108,7 +108,7 @@ Frontend:
 - Created components for chat interactions and document management.
 
 Backend:
-- Connected backend to OpenAI’s API for processing user queries.
+- Connected backend to OpenAI's API for processing user queries.
 - Integrated Langchain for language processing tasks like summarization and translations.
 
 Testing:
@@ -175,7 +175,7 @@ We implemented a combination of manual and automated testing methods to ensure t
 
 - Unit Tests: Verified the functionality of individual components like APIs, user authentication, and document uploads.
 - Integration Tests: Assessed interactions between multiple components, ensuring APIs, the database, and front-end elements work seamlessly.
-- User Acceptance Testing (UAT): Conducted by team members simulating end-user scenarios to validate that the application meets the client’s requirements.
+- User Acceptance Testing (UAT): Conducted by team members simulating end-user scenarios to validate that the application meets the client's requirements.
 
 - Frontend: Browser Developer Tools for runtime logs and manual testing of UI interactions.
 - Backend: Logs were examined using the terminal during local development and Heroku logs post-deployment.
@@ -208,7 +208,7 @@ Frontend Deployment (Netlify):
 - Set up the build command and base directory:
 - Build Command: CI=false npm run build
 - Base Directory: g3gpt/build
-- Deploy the application and add the Netlify URL to Azure’s redirect URIs.
+- Deploy the application and add the Netlify URL to Azure's redirect URIs.
 
 
 ### Frontend Deployment (Netlify):
@@ -292,4 +292,3 @@ Run sanity checks on the deployed application:
 - Test login functionality for Azure SSO.
 - Validate API responses by uploading and querying documents.
 - Conduct end-to-end tests to simulate real user behavior.
-

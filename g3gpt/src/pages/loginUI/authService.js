@@ -1,4 +1,4 @@
-import { pca } from "./authConfig";
+import { pca } from './authConfig';
 
 // Redirect user to Azure AD for login
 export async function redirectToLogin() {
@@ -23,18 +23,18 @@ export async function handleRedirectResponse() {
       console.log("Auth Code:", authCode);
 
       // Send auth_code to the backend
-      const backendResponse = await fetch("http://localhost:3000/auth/callback", {
-        method: "POST",
+      const backendResponse = await fetch('http://localhost:3000/auth/callback', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ code: authCode }),
       });
 
       const tokens = await backendResponse.json();
-      console.log("Tokens from backend:", tokens);
+      console.log('Tokens from backend:', tokens);
     }
   } catch (error) {
-    console.error("Error handling redirect response:", error);
+    console.error('Error handling redirect response:', error);
   }
 }
