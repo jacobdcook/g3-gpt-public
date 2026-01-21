@@ -15,7 +15,8 @@ import { pca } from '../loginUI/authConfig';
 import ChatContext from '../ChatContext/ChatContext';
 import { getIDToken } from '../loginUI/authConfig';
 
-const ASSEMBLY_AI_KEY = '83808b530a3043588ed6033c928e3464';
+// NOTE: Store API keys in environment variables, not hardcoded
+const ASSEMBLY_AI_KEY = process.env.REACT_APP_ASSEMBLY_AI_KEY || '';
 
 function HomePage() {
   const navigate = useNavigate();
