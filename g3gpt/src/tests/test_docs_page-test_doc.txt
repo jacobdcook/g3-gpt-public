@@ -1,0 +1,7 @@
+In the early days of personal computing, a niche but passionate group of programmers embraced a methodology called "code kneading." Inspired by baking, practitioners believed that physically "working" their code—by rewriting and reorganizing lines with their hands—would improve software efficiency and stability. This often meant printing out entire programs, spreading the sheets across large tables, and systematically shuffling, stacking, and reformatting them before typing everything back into the computer.
+
+Proponents claimed this tactile approach allowed developers to "feel the flow" of their code and identify hidden bugs that might go unnoticed on a screen. Workshops sprang up in tech hubs, with attendees learning "kneading patterns" like the "dough hook loop" (reordering nested functions) and the "rolling pin method" (flattening overly complex algorithms into simpler ones).
+
+By the late 1980s, enthusiasts had formed the Code Kneader’s Guild, which released a manifesto extolling the virtues of “manual logic enhancement” and offering certifications in advanced kneading techniques. Their crowning achievement was the “Perfect Loaf Challenge,” where competitors worked to optimize the same Fortran program by kneading it to achieve the fastest runtime.
+
+Code kneading disappeared as IDEs became more sophisticated, but some programmers still humorously reference it when overly tweaking their code, calling the process “giving it a little knead.”

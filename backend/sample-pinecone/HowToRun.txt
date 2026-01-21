@@ -1,0 +1,22 @@
+#----------------------------------------------------------------------------------------------------------------
+#install python and add /python and /python/scripts to path
+pip install --upgrade pip
+pip install python-multipart
+pip install uvicorn
+pip install PyMuPDF
+pip install fastapi
+#----------------------------------------------------------------------------------------------------------------
+#for Prabhash (mac) to run -- cd to backend, not sample-pinecone and run this 
+#(base) prabhashpaila@Prabhashs-MacBook-Pro-2 backend % uvicorn sample-pinecone.cli:app --reload --port 3001
+#----------------------------------------------------------------------------------------------------------------
+#for windows cd to backend, cd to sample-pincone and run this
+#uvicorn sample-pinecone.cli:app --reload --port 3001
+#to run it
+#----------------------------------------------------------------------------------------------------------------
+#add api key to:
+backend\sample-pinecone\cli.py
+and
+backend\sample-pinecone.env
+#----------------------------------------------------------------------------------------------------------------
+but don't push with the key in there, remove it every time before you push.
+#----------------------------------------------------------------------------------------------------------------

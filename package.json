@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "chromedriver": "^131.0.1"
+  }
+}

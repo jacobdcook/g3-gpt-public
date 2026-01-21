@@ -1,0 +1,120 @@
+.loginWrapper {
+    background: linear-gradient(180deg, #383636 0%, #9E9898 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.logoContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent; /* Removed background color for cleaner look */
+    box-shadow: none; /* Removed the box shadow */
+    border: none; /* Removed the border */
+    width: 100%; /* Use full width */
+    max-width: 350px; /* Maintain a maximum width for the login form */
+}
+
+.loginLabel {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    display: block; 
+    color: black; 
+    text-align: left;
+}
+
+.logo {
+    height: 8rem; /* Reduced size for a cleaner look */
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.loginTextContainer {
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginTextTitle {
+    color: #1C1C1C;  /* Modern black color (very dark gray) */
+    font-family: 'Inter', sans-serif;  /* Consistent font family */
+    font-size: 50px;  /* Emphasized font size */
+    font-weight: 700;  /* Bold font weight for emphasis */
+    line-height: 1.2;  /* Line height for readability */
+    letter-spacing: -0.5px;  /* Tighter letter spacing for a modern feel */
+    text-align: center;  /* Center the title */
+    margin-bottom: 30px;  /* Space below the title */
+    text-transform: uppercase;  /* Uppercase for a striking effect */
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.loginTextTitle:hover {
+    transform: translateY(-3px);  /* Slight lift on hover */
+    color: #A0A0A0;  /* Modern gray color on hover */
+}
+
+
+.loginText {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+}
+
+
+
+
+.azureLoginButton {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;  
+    border-radius: 8px;  
+    padding: 12px 24px; 
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); 
+    color: #ffffff;  
+    border: none; 
+  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    
+    transition: background 0.3s ease, transform 0.2s ease;  
+}
+
+.azureLoginButton:hover {
+    background: linear-gradient(135deg, #4A90E2 0%, #0056D2 100%);  /* Modern blue gradient on hover */
+    transform: translateY(-2px);  /* Slight lift effect on hover */
+}
+
+.azureLoginButton:active {
+    transform: translateY(0);  /* Return to normal on click */
+}
+
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: url(../fonts/InknutAntiqua-Light.ttf);
+}
+

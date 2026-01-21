@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(180deg, #383636 0%, #9E9898 100%); /* Gradient for the body */
+  font-family: 'Inter', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  color: #333; /* Dark text color for readability */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.sidebar {
+  width: 220px; /* Maintain sidebar width */
+  padding: 20px; /* Increased padding for better spacing */
+  background-color: #252525; /* Keep sidebar dark for contrast */
+  border-right: 1px solid rgba(100, 100, 100, 0.5);
+  transition: width 0.3s ease, padding 0.2s ease;
+  overflow: hidden;
+}
+
+.sidebar:not(:hover) {
+  width: 220px;
+  padding: 20px;
+}
+
+.sidebar.collapsed {
+  width: 0;
+  padding: 0;
+}
+
+.hamburger {
+  display: none; /* Hidden by default, shown on mobile */
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
+    position: fixed;
+    top: 15px; /* Adjusted for better visibility */
+    left: 15px;
+    z-index: 1000;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem; /* Spacing between logo and other elements */
+}
+
+.logoTextTitle {
+  color: #1C1C1C;  /* Dark gray for readability */
+  font-family: 'Inter', sans-serif;  /* Modern font family */
+  font-size: 60px;  /* Increased font size */
+  font-weight: 1000;  /* Ultra-bold font weight */
+  line-height: 1.2;  /* Optimal line height */
+  letter-spacing: 0px;  /* Tighter letter spacing for stronger impact */
+  text-align: center;  /* Center the logo text */
+  margin-bottom: 30px;  /* Space below for clean separation */
+  text-transform: uppercase;  /* Uppercase to maintain striking appearance */
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.logoTextTitle:hover {
+  transform: scale(1.05);  /* Slight zoom on hover */
+  color: #333;  /* Darker color on hover for effect */
+}
+
+.logo {
+  height: 6rem; /* Adjusted logo height */
+}
+
+.brand {
+  font-size: 2.2rem; /* Increased brand font size for prominence */
+  color: white;
+  margin-left: 1rem;
+}
+
+.nav {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.listItems.clickable {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;  
+  border-radius: 8px;  
+  padding: 12px 24px;  
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 15px;   
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  color: #ffffff;  
+  border: none;  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;  
+  display: flex;
+}
+
+.listItems.clickable:hover {
+  background: linear-gradient(135deg, #4A90E2 0%, #0056D2 100%);  /* Modern blue gradient on hover */
+  transform: translateY(-2px);  /* Slight lift effect on hover */
+}
+
+.listItems.clickable.active {
+  background-color: #4e4d4d;
+}
+
+.listItems.clickable > img {
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.separator {
+  border-right: 1px solid rgba(100, 100, 100, 0.5);
+  width: 100%;
+  height: 1px;
+  background: #333;
+  margin: 2rem 0;
+}
+
+.main {
+  flex-grow: 1;
+  background: linear-gradient(180deg, #383636 0%, #9E9898 100%); /* Match the specified gradient */
+  color: white; /* Set text color to white for contrast */
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 8rem;
+}
+
+.chats {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: calc(100vh - 18rem); /* Adjusted height for footer space */
+  flex: auto;
+  /*padding-right: 6rem;
+  padding-left: 6rem;*/
+}
+
+.chats::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+.chats::-webkit-scrollbar-track {
+  background: #333; /* Darker background for the scroll bar */
+  border-radius: 10px; /* Rounded edges for the scroll bar */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* shadow effect on scroll bar */
+}
+
+.chats::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #757c85, #2c2d2f); /* gradient for scroll bar*/
+  border-radius: 10px; /* Rounded edges */
+  border: 2px solid #252525; /* Border color to match the container background */
+
+}
+
+.chat {
+  margin: 1rem 0; /* Top and bottom margin for chat items */
+  padding: 1.5rem 2rem; /* Adjusted padding for chat content */
+  font-size: 1.3rem; /* Adjusted font size for chat */
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+  border-radius: 0.5rem; /* Rounded corners */
+  max-width: 50vw;
+  align-items: center;
+
+}
+
+.chat.user .user-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.msg-container { /* Align and color messages based on user vs. bot */
+  width: 100%;
+  display: flex;
+
+  &.user {
+    justify-content: end;
+  }
+}
+
+.chat.user {
+  background: rgb(176, 176, 176); 
+  color: black;
+}
+
+.chatImg {
+  object-fit: cover;
+  width: 3.5rem;
+  margin-right: 1.5rem; 
+  border-radius: 50%; 
+}
+
+.chatFooter {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.chatInput {
+  padding: 0.5rem; 
+  background: rgba(240, 240, 240, 0.8); 
+  display: flex;
+  align-items: center;
+  border-radius: 1.5rem; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); 
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.chatInput:hover {
+  background: rgba(255, 255, 255, 1); 
+}
+
+.chatInput > input {
+  width: calc(100% - 4rem); 
+  outline: none; 
+  padding: 0.75rem; 
+  color: rgb(50, 50, 50); 
+  background: transparent; 
+  border: none; 
+  font-size: 1.4rem; 
+  border-radius: 1.5rem; 
+  margin-right: 0.5rem; 
+}
+
+.chatInput > .upload,
+.chatInput > .send,
+.chatInput > .mic {
+  background: transparent; 
+  border: none; 
+  outline: none;
+  margin-left: 0.5rem; 
+  cursor: pointer; 
+  transition: transform 0.2s; 
+}
+
+.chatInput > .upload:hover,
+.chatInput > .send:hover,
+.chatInput > .mic:hover {
+  transform: scale(1.1); 
+}
+
+.chatInput > .upload > img,
+.chatInput > .send > img,
+.chatInput > .mic > img {
+  height: 2.2rem; 
+  transition: filter 0.2s; 
+}
+
+.chatInput > .upload:hover > img,
+.chatInput > .send:hover > img,
+.chatInput > .mic:hover > img {
+  filter: brightness(1.1); 
+}
+
+.Microphone.active {
+  background-color: red;
+  border: none;
+}
+
+.chatFooter > p {
+  margin: 1rem 0; 
+}
+
+.document-upload-container {
+  margin-top: 1rem; 
+}
+
+.document-upload-button {
+  display: none; 
+}
+
+.file-upload-label {
+  background-color: transparent; 
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.file-upload-label:hover {
+  background-color: #4e4d4d; 
+}
+
+.filePreviewArea {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.filePreviewItem {
+  background: #333333;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filePreviewItem span {
+  color: white;
+  margin-right: 10px;
+}
+
+.filePreviewItem button {
+  cursor: pointer;
+}
+
+.thinkingIndicator {
+  font-size: 1.5rem;
+  padding-left: 1vw;
+}
+
+/* For rendered markdown */
+div.chat.bot > .txt > span {
+  margin-top: 8px;
+}
+
+.txt > ul, .txt > ol, .txt > * > ol, .txt > * > ul {
+  padding-left: 16px;
+  margin-top: 8px;
+}
+
+.txt > h1, .txt > h2, .txt > h3,.txt > h4, .txt > h5, .txt > h6 {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.txt pre {
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: #444444;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.txt pre code {
+  display: block;
+  white-space: pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Styling for logout button */
+.listItems.clickable.logoutBtn {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 275px;
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.listItems.clickable.logoutBtn .icon {
+  margin-left: -13px;
+  vertical-align: middle; 
+}
+
+.listItems.clickable.logoutBtn:hover {
+  background: linear-gradient(135deg, #4A90E2 0%, #0056D2 100%);
+  transform: translateY(-2px);
+}
+
+.listItems.clickable.logoutBtn:active {
+  transform: translateY(0);
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: #333333;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: auto; /* Pushes the button to the bottom */
+}
+
+.logoutBtn:hover {
+  background: linear-gradient(135deg, #4A90E2 0%, #0056D2 100%);
+  transform: translateY(-2px);
+}
+
+
+/* Dialog box styling */
+.logout-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.dialog-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-content p {
+  margin-bottom: 20px;
+}
+
+.dialog-content button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.dialog-content button:hover {
+  background-color: #0056b3;
+}

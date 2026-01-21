@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #383636 0%, #9E9898 100%); 
+    color: white; 
+    font-size: 16px; /* Slightly reduced font size */
+}
+.App {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: flex-start; /* Move all content to the left */
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 220px;
+    padding: 20px;
+    background-color: #252525;
+    border-right: 1px solid rgba(100, 100, 100, 0.5);
+    transition: width 0.3s ease, padding 0.2s ease;
+  }
+  
+  .sidebar.collapsed {
+    width: 0;
+    padding: 0;
+  }
+  
+  .faq {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .faq h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .qa-item {
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  
+  .question {
+    font-size: 15px;
+    padding: 15px;
+    background-color: rgba(50, 50, 50, 1);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .question:hover {
+    background-color: #4A90E2; /* Add hover effect for clarity */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+
+  .answer {
+  background-color: rgb(35, 35, 35);
+  font-size: 13.5px;
+  color: #ffffff;
+  border-radius: 12px;
+  line-height: 1.7;
+  overflow: hidden;
+  padding: 0 18px;
+  transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+}
+  
+.resource-container {
+    background-color: rgba(50, 50, 50, 1);
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 2rem;
+    color: white;
+  }
+  
+  .resource-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .resource-list li {
+    margin: 0.7rem 0;
+  }
+  
+  .resource-list a {
+    display: inline-block;
+    color: #383636;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.25;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .resource-list a:hover {
+    color: #0056b3; /* Hover color for links */
+    background-color: #f1f1f1; /* Light gray background on hover */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,162 @@
+.fileUploadPrompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .promptContainer {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    height: min-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Select File Button */
+  .selectFileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-width: 2px;
+    padding: 8px;
+    margin-bottom: 15px;
+    width: 100%
+  }
+  
+  .fileNameContainer {
+    flex-grow: 1; /* Allow the filename to take up available space */
+    overflow: hidden;
+}
+  
+  .selectFileButton {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .fileName {
+    font-size: 0.9em;
+    color: #333; /* Change this color to your desired font color */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+    flex-grow: 1;
+  }
+  
+  .fileNameDisplay {
+    font-size: 0.9em;
+    color: #555;
+    flex: 1;
+    margin-left: 8px;
+  }
+
+   /* Select File section */
+   h3 {
+    text-align: left;
+    font-size: 1em;
+    margin-top: 15px;
+    font-weight: bold;
+    color:#333;
+    margin-bottom: 10px;
+  }
+  
+  /* Role Assignment Section */
+  h4 {
+    text-align: left;
+    font-size: 1em;
+    margin-top: 15px;
+    font-weight: bold;
+    color:#333;
+    margin-bottom: 10px;
+  }
+  
+  .rolesCheckboxes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    text-align: left;
+  }
+  
+  .rolesCheckboxes label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #333;
+  }
+  
+  /* Save and Cancel Buttons */
+  .promptButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .saveButton,
+  .cancelButton {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .saveButton {
+    background: #28a745;
+    color: white;
+  }
+  
+  .cancelButton {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .saveButton:hover {
+    background: #218838;
+  }
+  
+  .cancelButton:hover {
+    background: #c82333;
+  }
+  
+  .saveButtonDisabled {
+      background-color: #888888 !important;
+      color: #dddddd !important;
+      cursor: not-allowed !important;
+  }
+
+  .docPageWarning {
+    color: #b91c1c;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .docSelectFeedback {
+    color: gray;
+    margin-top: 1.5rem;
+    left: -4rem;
+    font-style: italic;
+    font-weight: bold;
+
+    &.valid {
+      color: #28a745;
+    }
+  }

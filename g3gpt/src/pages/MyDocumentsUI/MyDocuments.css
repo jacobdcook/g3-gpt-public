@@ -1,0 +1,492 @@
+/* g3gpt/src/pages/MyDocumentsUI/MyDocuments.css */
+
+.main {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto; /* This will handle all vertical scrolling */
+  min-height: 100vh;
+  height: auto; /* Let the content expand naturally */
+  padding: 20px;  
+  flex: 1;
+  
+}
+
+.myDocuments {
+  display: flex;
+  height: 100vh;
+  max-width: 100vw;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 2.8rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 220px; 
+  padding: 20px;
+  background-color: #252525;
+  border-right: 1px solid rgba(100, 100, 100, 0.5);
+  transition: width 0.3s ease, padding 0.2s ease;
+  overflow: hidden;
+ 
+}
+
+/* Hamburger menu */
+.hamburger {
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.nav {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.listItems.clickable {
+  background: #333;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.listItems.clickable:hover {
+  background-color: #4e4d4d;
+}
+
+.listItems.clickable.active {
+  background-color: #4A90E2;
+}
+
+/* Styling for logout button */
+.listItems.clickable.logoutBtn {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 275px;
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.listItems.clickable.logoutBtn .icon {
+  margin-left: -13px;
+  vertical-align: middle; 
+}
+
+.listItems.clickable.logoutBtn:hover {
+  background: linear-gradient(135deg, #4A90E2 0%, #0056D2 100%);
+  transform: translateY(-2px);
+}
+
+.listItems.clickable.logoutBtn:active {
+  transform: translateY(0);
+}
+
+/* Docs Container */
+.docsContainer {
+  flex-grow: 1; /* This will make sure the container takes up remaining space */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #252525;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.docsContainer table {
+  width: 100%; /* Ensure both tables are the same width */
+  margin: 0 auto; /* Center the tables */
+}
+
+/* Ensure the title section doesn't get compressed */
+.docsContainer h2 {
+  color: #A0A0A0;
+  font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.docsContainer h2:hover {
+  transform: translateY(-3px);
+  color: #1C1C1C;
+}
+
+/* Upload button */
+.uploadButton {
+  padding: 6px 12px; /* Reduced padding for shorter width and height */
+  height: 28px; /* Reduced height */
+  background-color: #007BFF;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 15px; /* Adjusted radius to match the smaller size */
+  cursor: pointer;
+  font-size: 14px; /* Slightly smaller font size */
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+
+
+
+.uploadButton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+
+/* Remove button styling */
+.removeButton {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.removeButton:hover {
+  background-color: #e64a19;
+}
+
+/* Go back button */
+.goBackButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 20px;
+  outline: none;
+}
+
+.goBackButton:hover {
+  background-color: #45a049;
+}
+
+/* Created by text */
+.createdBy {
+  font-size: 16px;
+  color: #A0A0A0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Search bar */
+.searchBar {
+  padding: 12px 20px;
+  height: 48px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Sort options */
+.sortSelect {
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+/* Logout Dialog */
+.logout-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-content p {
+  margin-bottom: 20px;
+  color: black; 
+}
+
+.dialog-content button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.dialog-content button:hover {
+  background-color: #0056b3;
+/* Favorites Button */
+}
+.toggleFavoritesButton {
+  padding: 10px 15px; /* Padding for the button */
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.2s; /* Smooth transition */
+}
+
+.toggleFavoritesButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.documentsMenu {
+  margin-top: 20px; /* Spacing above the document menu */
+}
+
+/* Styling for the menu header */
+.menuHeader {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between headers */
+  background-color: #f1f1f1; /* Light background color for the header */
+  padding: 10px; /* Padding around the header */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-bottom: 10px; /* Space below headers */
+  flex-direction: row;
+}
+
+/* Styling for header text */
+.favoritesHeader, .documentNameHeader, .uploadTimeHeader {
+  flex: 1; /* Equal width for each header */
+  text-align: center; /* Center the text */
+  color: #333; /* Dark text color for header */
+  font-weight: bold; /* Make header text bold */
+}
+
+/* Styling for header buttons */
+.headerButton {
+  padding: 10px 15px; /* Padding for header buttons */
+  background-color: #007bff; /* Match the button color */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  margin-right: 10px; /* Space between buttons */
+  transition: background-color 0.2s; /* Smooth transition */
+}
+
+.headerButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.showAllButton {
+  padding: 10px 15px; /* Padding for the button */
+  background-color: #252525; /* Dark background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.2s; /* Smooth transition */
+  margin-bottom: 20px; /* Space below the button */
+  margin-top: 20px;
+}
+
+.showAllButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Table for Document Headers and Content */
+.docsTable {
+  width: 100%; /* Full width of container */
+  border-collapse: separate; /* Separate border */
+  border-spacing: 0 10px; /* Space between rows */
+  margin-top: 20px;
+  display: table;
+  table-layout: fixed;
+}
+
+
+/*Added for header*/
+/* Styles for the header table */
+.docsHeaderTable {
+  width: 100%; /* Full width to align with docsTable */
+  border-collapse: collapse; /* Remove gaps between cells */
+  margin-bottom: 10px; /* Space between header and main table */
+}
+
+.docsHeaderTable th {
+  background-color: #333; /* Match header background color */
+  color: #f8f9fa; /* Header text color */
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 400;
+  border: 1px solid #d1d1d1;
+}
+
+
+.docsHeaderTable, .docsTable {
+  table-layout: fixed; /* Ensures equal column width */
+  width: 100%; /* Each column takes an equal width */
+  text-align: center; /* Center-align text in all columns */
+  border-collapse: collapse;
+
+}
+
+.docsHeaderTable th, .docsTable td {
+  padding: 12px 18px;
+  vertical-align: middle;
+}
+
+/* Ensure no additional margin/padding */
+.docsHeaderTable {
+  margin-bottom: 0; /* Align with the docsTable */
+}
+
+.docsTable .docItem td {
+  text-align: right; /* Center-align text */
+}
+
+
+/* Header Styling for docs table*/
+.docsTable th {
+  background-color: #333; /* Light background for header */
+  color: #f8f9fa; /* Dark text color */
+  font-weight: bold; /* Bold text for header */
+  text-align: center; /* Center-align header text */
+  border: 1px solid #d1d1d1; /* Light gray border */
+  padding: 12px 18px; /* Adjusted padding for header cells */
+  border-radius: 7px; /* Border Radius*/
+  font-size: 17px; /* Font Size*/
+  font-weight: 400; /* Font thickness*/
+}
+
+
+/* Style for Favorite Icon/Button Column */
+.docsTable .favoritesColumn {
+  width: 50px; /* Narrow width for favorite column */
+  text-align: center;
+}
+
+.docItem {
+  display: flex; /* Even column layout */
+  justify-content: space-between; /* Add spacing between columns */
+  padding: 10px 0; /* Add spacing between rows */
+  align-items: center;
+}
+
+.docItem td {
+  vertical-align: middle; /* Center-align content vertically */
+}
+
+/* Add styles for individual columns within rows */
+.docItem div {
+  flex: 1; /* Allow each column to take equal width */
+  padding: 0 10px; /* Add padding for better readability */
+  display: flex;
+  overflow: hidden; /* Prevent content from overflowing */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+
+/* Styling for document details */
+.docDetails {
+  text-align: left; /* Align text to the left */
+  padding-left: 0 10px; /* Add padding for alignment */
+  display: flex; /* Use flexbox for consistent alignment */
+  align-items: center; /* Vertically center content */
+}
+
+
+/* Styling for file upload date */
+.fileUploadDate {
+  text-align: center; /* Align text to the left */
+  padding-left: 10px; /* Add left padding for alignment */
+  font-size: 14px; /* Optional: Adjust font size */
+  color: #f1f1f1; /* Match other text color styles */
+  display: flex; /* Use flexbox for vertical centering */
+  align-items: center;
+}
+
+/* Styling for remove button cell */
+.removeButtonCell {
+  text-align: left; /* Align content to the right */
+  padding-right: 10px; /* Add right padding */
+  display: flex; /* Use flexbox */
+  justify-content: flex-end; /* Align button to the right */
+  align-items: center; /* Vertically center the button */
+}
+
+
+/* Scroll bar css details*/
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #757c85, #2c2d2f); /* gradient for scroll bar*/
+  border-radius: 10px; /* Rounded edges */
+  border: 2px solid #252525; /* Border color to match the container background */
+}
+
+::-webkit-scrollbar-track {
+  background: #333; /* Darker background for the scroll bar */
+  border-radius: 10px; /* Rounded edges for the scroll bar */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* shadow effect on scroll bar */
+}
