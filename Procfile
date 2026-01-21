@@ -1,0 +1,1 @@
+web: uvicorn backend.sample-pinecone.cli:app --host=0.0.0.0 --port=${PORT}
